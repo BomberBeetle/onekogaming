@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ces4f07jl1w1i"]
+
+[ext_resource type="Script" uid="uid://pwbgavfsio3" path="res://oneko.gd" id="1_v1eno"]
+[ext_resource type="Texture2D" uid="uid://dpselmdkt8sih" path="res://evil.png" id="2_v1eno"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vyht1"]
+size = Vector2(142.51538, 140.86777)
+
+[node name="Bad" type="CharacterBody2D" groups=["Bad"]]
+scale = Vector2(0.37890643, 0.3691405)
+script = ExtResource("1_v1eno")
+chase_speed = 500
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.6391773, 1.354496)
+scale = Vector2(1.9972129, 2.022208)
+texture = ExtResource("2_v1eno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.7089844)
+shape = SubResource("RectangleShape2D_vyht1")
